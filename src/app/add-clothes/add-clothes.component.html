@@ -1,0 +1,62 @@
+<form
+  [formGroup]="clothesDataForm"
+  (ngSubmit)="addClothes(clothesDataForm.value)"
+>
+  <div>
+    <div>
+      <label
+        >Unique code
+        <input type="text" name="code" formControlName="code" />
+      </label>
+    </div>
+    <div>
+      <label
+        >Brand
+        <input type="text" name="brand" formControlName="brand" />
+      </label>
+    </div>
+    <div>
+      <label
+        >Gender<span> Male</span>
+        <input
+          type="radio"
+          name="gender"
+          value="male"
+          formControlName="gender"
+        />
+        <span> Female </span>
+
+        <input
+          type="radio"
+          name="gender"
+          value="female"
+          formControlName="gender"
+        />
+      </label>
+    </div>
+    <div>
+      <label>
+        type
+        <select name="type" formControlName="type">
+          <option value="Jeans">Jeans</option>
+          <option value="trousers">trousers</option>
+          <option value="shirt">shirt</option>
+          <option value="top">top</option>
+        </select>
+      </label>
+    </div>
+    <div>
+      <label>
+        price
+        <input type="text" name="price" formControlName="price" />
+      </label>
+    </div>
+    <div>
+      <label>
+        Stock
+        <input type="text" name="stock" formControlName="stock" />
+      </label>
+    </div>
+  </div>
+  <button type="submit">Add</button>
+</form>

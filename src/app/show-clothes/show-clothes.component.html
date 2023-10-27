@@ -1,0 +1,23 @@
+<table>
+  <thead>
+    <th>Unique Code</th>
+    <th>Brand</th>
+    <th>Gender</th>
+    <th>Type</th>
+    <th>Price</th>
+    <th>Stock</th>
+    <th>Action</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cloth of clothesData; let i = index">
+      <td>{{ cloth.code }}</td>
+      <td>{{ cloth.brand }}</td>
+      <td>{{ cloth.gender }}</td>
+      <td>{{ cloth.type }}</td>
+      <td>{{ cloth.price }}</td>
+      <td>{{ cloth.stock }}</td>
+      <td><button (click)="editData(i)">Edit</button></td>
+      <td><button (click)="deleteData(i)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
